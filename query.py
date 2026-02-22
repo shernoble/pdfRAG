@@ -31,9 +31,8 @@ def retrieve(query, k = 3):
     # similarity search with index
     query_vector = embed_query(query)
 
-    faiss.normalize_L2(query_vector)
-
     query_vector = np.expand_dims(query_vector, axis=0)
+    faiss.normalize_L2(query_vector)
 
     distances, indices = index.search(query_vector, k)
 
