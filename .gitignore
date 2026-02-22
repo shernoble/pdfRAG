@@ -1,0 +1,88 @@
+#include basic git ignore patterns
+# See https://git-scm.com/docs/gitignore for more details
+
+# Virtual Environments
+pdfvenv/
+venv/
+env/
+ENV/
+.venv
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+*.launch
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Data and Models
+*.pdf
+*.pkl
+*.pickle
+*.h5
+*.pt
+*.pth
+*.onnx
+*.model
+data/
+uploads/
+downloads/
+models/
+cache/
+
+# API Keys and Secrets
+.env.local
+.env.*.local
+secrets.json
+credentials.json
+apikeys.txt
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Output files
+output/
+results/
+logs/
+*.csv
+*.xlsx
+
+# Dependencies lock files (optional - uncomment if you want to include them)
+# poetry.lock
+# Pipfile.lock
