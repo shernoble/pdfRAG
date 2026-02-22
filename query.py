@@ -27,11 +27,11 @@ embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 def embed_query(query):
     return embedding_model.encode(query)
 
-    return np.array(response.data[0].embedding).astype("float32")
-
 def retrieve(query, k = 3):
     # similarity search with index
     query_vector = embed_query(query)
+
+    faiss.normalize_L2(query_vector)
 
     query_vector = np.expand_dims(query_vector, axis=0)
 

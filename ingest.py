@@ -39,7 +39,9 @@ def generate_embeddings(txt):
 def store_embeddings_index(embeddings, chunks):
 
     dimension = len(embeddings[0])
-    index = faiss.IndexFlatL2(dimension)
+    faiss.normalize_L2(embeddings)
+    # index = faiss.IndexFlatL2(dimension)#L2 similarity - euclidean distance
+    index = faiss.IndexFlatIP(dimension) #cosine similarity
 
     vectors = np.array(embeddings).astype("float32")
     index.add(vectors) #saves to index
